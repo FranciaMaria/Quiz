@@ -1,0 +1,5 @@
+<h1>Home#index</h1>
+<%#= link_to "Visitor's Page: Answering questions", :controller => "quizzs", :action => "answering", :id =>"1" %>
+<%= link_to "Visitor's Page: Answering questions", answering_path(params[:id]) %><br/>
+
+<%= link_to "Quizz Management", quizzs_path %>

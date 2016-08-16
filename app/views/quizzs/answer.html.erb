@@ -1,0 +1,26 @@
+<p>
+<b>Question:</b>
+<%= @quizz.question %>
+</p>
+<p>
+<b>Ans1:</b>
+<%= @quizz.ans1 %>
+</p>
+<p>
+<b>Ans2:</b>
+<%= @quizz.ans2 %>
+</p>
+<p>
+<b>Ans3:</b>
+<%= @quizz.ans3 %>
+</p>
+<%#= form_tag (:action => "check", :id => @quizz.id) do %>
+<%#= form_tag (check_quizz_path(params[:id])) do %>
+<%= form_tag (check_quizz_path) do %>
+<p>
+<b>The correct answer is number: </b>
+<%= text_field :ans, params[:ans] %>
+</p>
+<p><%= submit_tag ("check") %></p>
+<% end %>
+<%= link_to 'Back', answering_path(params[:id]) %>
